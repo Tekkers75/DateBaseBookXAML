@@ -1,0 +1,25 @@
+﻿<Window x:Class="MainDateBase.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainDateBase"
+        mc:Ignorable="d"
+        Title="Window1" Height="359" Width="484">
+    <Grid>
+        <Button x:Name="Button_Add_Book" Content="Button" HorizontalAlignment="Left" Margin="175,239,0,0" VerticalAlignment="Top" Click="Button_Add_Book_Click"/>
+        <Button x:Name="Button_Close_Form" Content="Button" HorizontalAlignment="Left" Margin="195,280,0,0" VerticalAlignment="Top" Click="Button_Close_Form_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="24,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="24,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="43,127,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="62,171,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="62,222,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="62,267,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_Author" HorizontalAlignment="Left" Margin="155,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Title" HorizontalAlignment="Left" Margin="155,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Genre" HorizontalAlignment="Left" Margin="155,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Year" HorizontalAlignment="Left" Margin="155,135,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Count" HorizontalAlignment="Left" Margin="155,166,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Price" HorizontalAlignment="Left" Margin="155,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
