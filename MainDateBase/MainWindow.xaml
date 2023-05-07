@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,94,0,-94"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,94,0,0"/>
         <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Save_Click"/>
         <Button x:Name="Button_Open" Content="Открыть" HorizontalAlignment="Left" Margin="114,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Open_Click"/>
         <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click"/>
-        <Button x:Name="Button_Del" Content="Удалить строку" HorizontalAlignment="Left" Margin="650,20,0,0" VerticalAlignment="Top" Width="84"/>
-        <Button x:Name="Button_Del_All" Content="Удалить все" HorizontalAlignment="Left" Margin="650,53,0,0" VerticalAlignment="Top" Width="84"/>
+        <Button x:Name="Button_Del" Content="Удалить строку" HorizontalAlignment="Left" Margin="650,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_Click"/>
+        <Button x:Name="Button_Del_All" Content="Удалить все" HorizontalAlignment="Left" Margin="650,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_All_Click"/>
+        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="477,20,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

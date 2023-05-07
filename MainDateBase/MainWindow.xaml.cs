@@ -39,30 +39,53 @@ namespace MainDateBase
 
         private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
-            //using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            //    if (filename == "")
-            //    {
-            //        if (saveFileDialog.ShowDialog() == DialogResult.Cancel) return;
-            //        filename = saveFileDialog.FileName;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (filename == "")
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult) return;
+                filename = saveFileDialog.FileName;
 
-            //    }
-            //book.SaveDB(filename);
+            }
+            book.SaveDB(filename);
         }
 
         private void Button_Open_Click(object sender, RoutedEventArgs e)
         {
-            //using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            //{
-            //    if (openFileDialog.ShowDialog() == DialogResult.Cancel) return;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filename = openFileDialog.FileName;
+                //this.Text = filename + " - База данных книжного магазина";
 
-            //    filename = openFileDialog.FileName;
-            //    //this.Text = filename + " - База данных книжного магазина";
 
-            //    dataGridView1.Rows.Clear();
-            //    book.OpenFile(filename);
+                book.OpenFile(filename);
 
-            //    WriteToDataGrid();
             }
         }
+
+        private void Button_Del_Click(object sender, RoutedEventArgs e)
+        {
+            int ind = datagrid.SelectedIndex;
+            book.books.RemoveAt(ind);
+
+
+
+            //if (ind <= datagrid.Items.Count)
+            //{
+            //    book.
+            //}
+            //datagrid.Items.RemoveAt(ind);
+            ////datagrid.
+            //book.DeleteBook(ind);
+
+
+        }
+
+        private void Button_Del_All_Click(object sender, RoutedEventArgs e)
+        {
+            book.books.Clear();
+            //book.DeleteDB();
+        }
     }
+}
 

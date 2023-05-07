@@ -87,10 +87,10 @@ namespace MainDateBase
             books.Clear();
         }
 
-        public void DeleteBook(int ind)
-        {
-            books.RemoveAt(ind);
-        }
+        //public void DeleteBook(int ind)
+        //{
+        //    books.RemoveAt(ind);
+        //}
     }
 }
 
