@@ -13,7 +13,8 @@
         <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click"/>
         <Button x:Name="Button_Del" Content="Удалить строку" HorizontalAlignment="Left" Margin="650,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_Click"/>
         <Button x:Name="Button_Del_All" Content="Удалить все" HorizontalAlignment="Left" Margin="650,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_All_Click"/>
-        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="477,20,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="477,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Click"/>
+        <Button x:Name="Button_Search" Content="Поиск" HorizontalAlignment="Left" Margin="349,20,0,0" VerticalAlignment="Top" Click="Button_Search_Click"/>
 
     </Grid>
 </Window>

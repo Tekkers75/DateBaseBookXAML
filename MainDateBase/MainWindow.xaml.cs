@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +88,52 @@ namespace MainDateBase
             book.books.Clear();
             //book.DeleteDB();
         }
+
+        private void Button_Search_Click(object sender, RoutedEventArgs e)
+        {
+            FormSearch FS = new FormSearch();
+            FS.Owner = this;
+            FS.Show();
+        }
+
+        int countCLICK = 0;
+        private void Button_Sort_Click(object sender, RoutedEventArgs e)
+        {
+            countCLICK++; // увеличиваем счетчик на 1 при каждом нажатии на кнопку
+
+            // проверяем значение счетчика и выполняем соответствующее действие
+            if (countCLICK == 1)
+            {
+                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
+                var sortByName = new SortDescription("Author", ListSortDirection.Ascending);
+                //применяем сортировку
+                datagrid.Items.SortDescriptions.Add(sortByName);
+                //обновляем данные в таблице
+                datagrid.Items.Refresh();
+            }
+            else if (countCLICK == 2)
+            {
+                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
+                var sortByName = new SortDescription("Author", ListSortDirection.Descending);
+                //удаление сущ.фильтрации
+                datagrid.Items.SortDescriptions.Clear();
+                //применяем сортировку
+                datagrid.Items.SortDescriptions.Add(sortByName);
+                //обновляем данные в таблице
+                datagrid.Items.Refresh();
+            }
+            else
+            {
+
+                countCLICK = 0;
+                datagrid.Items.SortDescriptions.Clear();
+            }
+        }
+
+
+
+
+
+
     }
 }
-

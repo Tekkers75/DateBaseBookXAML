@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace MainDateBase
 {
@@ -20,6 +22,7 @@ namespace MainDateBase
         //};
 
         public ObservableCollection<Book> books;
+       
 
 
         /// Вернуть список
@@ -86,6 +89,53 @@ namespace MainDateBase
         {
             books.Clear();
         }
+
+
+
+        public void /*ObservableCollection<Book>*/ Search(string search)
+        {
+            
+        }
+
+
+
+
+
+
+
+
+
+        //public void /*ObservableCollection<Book>*/ Search(string search)
+        //{
+
+        //    //ObservableCollection<Book> find = new ObservableCollection<Book>();
+
+        //    search = search.ToLower();
+        //    search = search.Replace(" ", "");
+
+        //    for (int i = 0; i < books.Count(); i++)
+        //    {
+        //        Book bk = books[i];
+
+        //        if (bk.Author.ToLower().Replace(" ", "").Contains(search))
+        //        {
+        //            books.Add(books[i]);
+        //            break;
+        //        }
+        //        else if (bk.Title.ToLower().Replace(" ", "").Contains(search))
+        //        {
+        //            books.Contains(books[i]);
+        //            break;
+        //        }
+        //    }
+
+        //    if (books.Count == 0) books.Add(books[-1]);
+        //    //return books;
+        //}
+
+
+
+
 
         //public void DeleteBook(int ind)
         //{

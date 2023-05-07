@@ -57,9 +57,16 @@
     </ApplicationDefinition>
     <Compile Include="Book.cs" />
     <Compile Include="dbBook.cs" />
+    <Compile Include="FormSearch.xaml.cs">
+      <DependentUpon>FormSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="FormSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
