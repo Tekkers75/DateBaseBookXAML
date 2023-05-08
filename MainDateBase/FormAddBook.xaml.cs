@@ -31,7 +31,7 @@ namespace MainDateBase
 
             MainWindow mForm = this.Owner as MainWindow;
             //DBBook dB = new DBBook();
-            try
+            if (check_input())
             {
                 string author = textBox_Author.Text;
                 string title = textBox_Title.Text;
@@ -50,11 +50,87 @@ namespace MainDateBase
                 mForm.Databook.AddBook(author, title, genre, year, count, price);
                 int n = mForm.Databook.books.Count;
             }
-            catch
-            {
-                MessageBox.Show("Пустое поле");
-            }
         }
+
+        private bool check_input()
+        {
+            SolidColorBrush error_color = new SolidColorBrush();
+            SolidColorBrush usual_color = new SolidColorBrush();
+
+            ///цвет ошибочных полей 
+            error_color.Color = Color.FromRgb(252, 187, 187);
+            /////цвет полей обычный
+            usual_color.Color = Colors.White;
+
+            bool hasError = false;
+
+            if (string.IsNullOrWhiteSpace(textBox_Author.Text))
+            {
+                textBox_Author.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Author.Background = usual_color;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox_Title.Text))
+            {
+                textBox_Title.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Title.Background = usual_color;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox_Genre.Text))
+            {
+                textBox_Genre.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Genre.Background = usual_color;
+            }
+
+            int year;
+            if (!int.TryParse(textBox_Year.Text, out year))
+            {
+                textBox_Year.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Year.Background = usual_color;
+            }
+
+            int count;
+            if (!int.TryParse(textBox_Count.Text, out count))
+            {
+                textBox_Count.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Count.Background = usual_color;
+            }
+
+            int price;
+            if (!int.TryParse(textBox_Price.Text, out price))
+            {
+                textBox_Price.Background = error_color;
+                hasError = true;
+            }
+            else
+            {
+                textBox_Price.Background = usual_color;
+            }
+            return !hasError;
+        }
+
+
+
 
         private void Button_Close_Form_Click(object sender, RoutedEventArgs e)
         {
