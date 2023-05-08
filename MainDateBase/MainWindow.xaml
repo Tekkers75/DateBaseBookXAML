@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainDateBase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="База данных библиотеки" Height="415" Width="715" Icon="/icon.ico" MaxWidth="715" MaxHeight="415" MinWidth="715" MinHeight="415">
     <Grid>
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,94,0,0"/>
-        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Save_Click"/>
-        <Button x:Name="Button_Open" Content="Открыть" HorizontalAlignment="Left" Margin="114,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Open_Click"/>
-        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click"/>
-        <Button x:Name="Button_Del" Content="Удалить строку" HorizontalAlignment="Left" Margin="650,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_Click"/>
-        <Button x:Name="Button_Del_All" Content="Удалить все" HorizontalAlignment="Left" Margin="650,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Del_All_Click"/>
-        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="477,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Click"/>
-        <TextBlock x:Name="Label_Save" HorizontalAlignment="Left" Margin="650,0,0,0" TextWrapping="Wrap" Text="Автосохранение" VerticalAlignment="Top" Width="148"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1614630795_15-p-fon-knigi-dlya-fotoshopa-24 — копия.jpg"/>
+        </Grid.Background>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10,94,10,32"/>
+        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="84" Click="Button_Save_Click" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Open" Content="Открыть" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Open_Click" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="114,20,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Del" Content="Удалить строку" Margin="0,20,50,0" VerticalAlignment="Top" Click="Button_Del_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Del_All" Content="Удалить все" Margin="0,53,50,0" VerticalAlignment="Top" Click="Button_Del_All_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="114,53,0,0" VerticalAlignment="Top" Click="Button_Sort_Click" Width="84" Background="#FFACCEF3"/>
+        <TextBlock x:Name="Label_Save" Margin="563,4,2,0" TextWrapping="Wrap" Text="Автосохранение" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -103,5 +103,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon — копия.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1614630795_15-p-fon-knigi-dlya-fotoshopa-24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1614630795_15-p-fon-knigi-dlya-fotoshopa-24 — копия.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

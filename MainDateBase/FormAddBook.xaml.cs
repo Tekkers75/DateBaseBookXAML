@@ -1,4 +1,5 @@
-﻿using MainDateBase;
+﻿// @author Саранчин К.А.
+using MainDateBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace MainDateBase
         {
 
             MainWindow mForm = this.Owner as MainWindow;
-            DBBook dB = new DBBook();
+            //DBBook dB = new DBBook();
             try
             {
                 string author = textBox_Author.Text;

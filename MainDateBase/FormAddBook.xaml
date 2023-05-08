@@ -5,23 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainDateBase"
         mc:Ignorable="d"
-        Title="Добавить новую книгу" Height="274" Width="282">
+        Title="Добавить новую книгу" Height="271" Width="315" Icon="/icon — копия.ico">
     <Grid>
-        <Button x:Name="Button_Add_Book" Content="Добавить" HorizontalAlignment="Left" Margin="40,204,0,0" VerticalAlignment="Top" Click="Button_Add_Book_Click" Width="80"/>
-        <Button x:Name="Button_Close_Form" Content="Закрыть" HorizontalAlignment="Left" Margin="150,204,0,0" VerticalAlignment="Top" Click="Button_Close_Form_Click" Width="80"/>
-        <Grid HorizontalAlignment="Left" Height="177" VerticalAlignment="Top" Width="240" Margin="10,10,0,0">
-            <Label Content="Автор" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,32,0,0"/>
-            <Label Content="Жанр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,61,0,0"/>
-            <Label Content="Год" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,92,0,0"/>
-            <Label Content="Количество" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,120,0,0"/>
-            <Label Content="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,151,0,0"/>
-            <TextBox x:Name="textBox_Author" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Text="Федор Достоевский" Margin="80,4,0,0"/>
-            <TextBox x:Name="textBox_Title" HorizontalAlignment="Left" Margin="80,34,0,0" TextWrapping="Wrap" Text="Преступление и наказание" VerticalAlignment="Top" Width="160"/>
-            <TextBox x:Name="textBox_Genre" HorizontalAlignment="Left" Margin="80,64,0,0" TextWrapping="Wrap" Text="Русская классика" VerticalAlignment="Top" Width="160"/>
-            <TextBox x:Name="textBox_Year" HorizontalAlignment="Left" Margin="80,94,0,0" TextWrapping="Wrap" Text="1866" VerticalAlignment="Top" Width="160"/>
-            <TextBox x:Name="textBox_Count" HorizontalAlignment="Left" Margin="80,124,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="160"/>
-            <TextBox x:Name="textBox_Price" HorizontalAlignment="Left" Margin="80,154,0,0" TextWrapping="Wrap" Text="99" VerticalAlignment="Top" Width="160" TextChanged="textBox_Price_TextChanged"/>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush TileMode="None" ImageSource="/1614630795_15-p-fon-knigi-dlya-fotoshopa-24.jpg"/>
+            </Grid.Background>
+            <Grid Margin="10,0,10,0" Height="232" VerticalAlignment="Center">
+                <Button x:Name="Button_Add_Book" Content="Добавить" Margin="30,194,0,0" Click="Button_Add_Book_Click" HorizontalAlignment="Left" Width="98" Height="20" VerticalAlignment="Top"/>
+                <Button x:Name="Button_Close_Form" Content="Закрыть" Margin="164,194,0,0" Click="Button_Close_Form_Click" HorizontalAlignment="Left" Width="98" Height="20" VerticalAlignment="Top"/>
+                <Label Content="Автор" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,32,0,0"/>
+                <Label Content="Жанр" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,61,0,0"/>
+                <Label Content="Год" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,92,0,0"/>
+                <Label Content="Количество" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,120,0,0"/>
+                <Label Content="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,151,0,0"/>
+                <TextBox x:Name="textBox_Author" TextWrapping="Wrap" VerticalAlignment="Top" Text="Федор Достоевский" Margin="80,4,13,0"/>
+                <TextBox x:Name="textBox_Title" Margin="80,34,13,0" TextWrapping="Wrap" Text="Преступление и наказание" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Genre" Margin="80,64,13,0" TextWrapping="Wrap" Text="Русская классика" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Year" Margin="80,94,13,0" TextWrapping="Wrap" Text="1866" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Count" Margin="80,124,13,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox_Price" Margin="80,154,13,0" TextWrapping="Wrap" Text="99" VerticalAlignment="Top" TextChanged="textBox_Price_TextChanged"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

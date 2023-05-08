@@ -1,4 +1,5 @@
-﻿using System;
+﻿// @author Саранчин К.А.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
