@@ -130,7 +130,7 @@ namespace MainDateBase
             if (countCLICK == 1)
             {
                 //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Author", ListSortDirection.Ascending);
+                var sortByName = new SortDescription("Автор", ListSortDirection.Ascending);
                 //применяем сортировку
                 datagrid.Items.SortDescriptions.Add(sortByName);
                 //обновляем данные в таблице
@@ -139,7 +139,7 @@ namespace MainDateBase
             else if (countCLICK == 2)
             {
                 //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Author", ListSortDirection.Descending);
+                var sortByName = new SortDescription("Автор", ListSortDirection.Descending);
                 //удаление сущ.фильтрации
                 datagrid.Items.SortDescriptions.Clear();
                 //применяем сортировку
