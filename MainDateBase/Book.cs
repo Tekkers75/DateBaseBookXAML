@@ -26,37 +26,37 @@ namespace MainDateBase
             this.price = price;
         }
 
-        public string Author
+        public string Автор
         {
             get { return author; }
             set { author = value; }
         }
 
-        public string Title
+        public string Название
         {
             get { return title; }
             set { title = value; }
         }
 
-        public string Genre
+        public string Жанр
         {
             get { return genre; }
             set { genre = value; }
         }
 
-        public int Year
+        public int Год
         {
             get { return year; }
             set { year = value; }
         }
 
-        public int Count
+        public int Количество
         {
             get { return count; }
             set { count = value; }
         }
 
-        public int Price
+        public int Цена
         {
             get { return price; }
             set { price = value; }
