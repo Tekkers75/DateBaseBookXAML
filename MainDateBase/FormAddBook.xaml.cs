@@ -18,9 +18,9 @@ namespace MainDateBase
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class FormAddBook : Window
     {
-        public Window1()
+        public FormAddBook()
         {
             InitializeComponent();
         }
@@ -58,6 +58,11 @@ namespace MainDateBase
         private void Button_Close_Form_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void textBox_Price_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

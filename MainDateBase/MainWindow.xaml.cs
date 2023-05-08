@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MainDateBase
 {
@@ -26,15 +27,21 @@ namespace MainDateBase
         public MainWindow()
         {
             InitializeComponent();
-            datagrid.ItemsSource = book.books;
+            datagrid.ItemsSource = Databook.books;
+            //System.Windows.Threading.DispatcherTimer 
+            Label_Save.Visibility = Visibility.Hidden;
+            InitializeTimer();
         }
 
-        public DBBook book = new DBBook();
+        DispatcherTimer timer = new DispatcherTimer();
+        DispatcherTimer timer1 = new DispatcherTimer();
+        public DBBook Databook = new DBBook();
         public string filename = "";
+
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            Window1 addform = new Window1();
+            FormAddBook addform = new FormAddBook();
             addform.Owner = this;
             addform.Show();
         }
@@ -48,7 +55,7 @@ namespace MainDateBase
                 filename = saveFileDialog.FileName;
 
             }
-            book.SaveDB(filename);
+            Databook.SaveDB(filename);
         }
 
         private void Button_Open_Click(object sender, RoutedEventArgs e)
@@ -60,7 +67,7 @@ namespace MainDateBase
                 //this.Text = filename + " - База данных книжного магазина";
 
 
-                book.OpenFile(filename);
+                Databook.OpenFile(filename);
 
             }
         }
@@ -68,9 +75,7 @@ namespace MainDateBase
         private void Button_Del_Click(object sender, RoutedEventArgs e)
         {
             int ind = datagrid.SelectedIndex;
-            book.books.RemoveAt(ind);
-
-
+            Databook.books.RemoveAt(ind);
 
             //if (ind <= datagrid.Items.Count)
             //{
@@ -80,21 +85,40 @@ namespace MainDateBase
             ////datagrid.
             //book.DeleteBook(ind);
 
-
         }
 
         private void Button_Del_All_Click(object sender, RoutedEventArgs e)
         {
-            book.books.Clear();
+            Databook.books.Clear();
             //book.DeleteDB();
         }
 
-        private void Button_Search_Click(object sender, RoutedEventArgs e)
+
+        private void InitializeTimer()
         {
-            FormSearch FS = new FormSearch();
-            FS.Owner = this;
-            FS.Show();
+            timer.Tick += new EventHandler(AutoSaveTimer);
+            timer.Interval = new TimeSpan(0, 5, 0);
+            timer.Start();
+            timer1.Tick += new EventHandler(AutoSaveTimerHide);
+            timer1.Interval = new TimeSpan(0, 5, 3);
+            timer1.Start();
         }
+
+
+        private void AutoSaveTimer(object sender, EventArgs e)
+        {
+            Databook.SaveDB(filename);
+            Label_Save.Visibility = Visibility.Visible;
+            timer.Start();
+        }
+
+        private void AutoSaveTimerHide(object sender, EventArgs e)
+        {
+            //Databook.SaveDB(filename);
+            Label_Save.Visibility = Visibility.Hidden;
+            timer.Start();
+        }
+
 
         int countCLICK = 0;
         private void Button_Sort_Click(object sender, RoutedEventArgs e)

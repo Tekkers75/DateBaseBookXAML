@@ -61,8 +61,6 @@ namespace MainDateBase
             set { price = value; }
         }
 
-
-
         public override string ToString()
         {
             return author + "|" + title + "|" + genre + "|" +

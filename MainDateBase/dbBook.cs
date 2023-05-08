@@ -12,25 +12,8 @@ namespace MainDateBase
 {
     public class DBBook
     {
-        // filename?
-
-        // todo: observable list
-
-        //List<Book> book = new List<Book>();
-        //{
-        //    new Book("1","1","1",2,2,3)
-        //};
-
         public ObservableCollection<Book> books;
        
-
-
-        /// Вернуть список
-        //public List<Book> Book
-        //{
-        //    get { return book; }
-        //}
-
         public DBBook()
         {
             books = new ObservableCollection<Book>();
@@ -90,57 +73,6 @@ namespace MainDateBase
             books.Clear();
         }
 
-
-
-        public void /*ObservableCollection<Book>*/ Search(string search)
-        {
-            
-        }
-
-
-
-
-
-
-
-
-
-        //public void /*ObservableCollection<Book>*/ Search(string search)
-        //{
-
-        //    //ObservableCollection<Book> find = new ObservableCollection<Book>();
-
-        //    search = search.ToLower();
-        //    search = search.Replace(" ", "");
-
-        //    for (int i = 0; i < books.Count(); i++)
-        //    {
-        //        Book bk = books[i];
-
-        //        if (bk.Author.ToLower().Replace(" ", "").Contains(search))
-        //        {
-        //            books.Add(books[i]);
-        //            break;
-        //        }
-        //        else if (bk.Title.ToLower().Replace(" ", "").Contains(search))
-        //        {
-        //            books.Contains(books[i]);
-        //            break;
-        //        }
-        //    }
-
-        //    if (books.Count == 0) books.Add(books[-1]);
-        //    //return books;
-        //}
-
-
-
-
-
-        //public void DeleteBook(int ind)
-        //{
-        //    books.RemoveAt(ind);
-        //}
     }
 }
 
