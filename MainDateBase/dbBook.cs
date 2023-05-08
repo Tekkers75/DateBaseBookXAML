@@ -31,6 +31,8 @@ namespace MainDateBase
         /// Сохранить БД в файл
         public void SaveDB(string name)
         {
+            if (!System.IO.File.Exists(name))
+                throw new Exception("Файл не существует");
             ///Почитать
             using (StreamWriter sw = new StreamWriter(name, false, System.Text.Encoding.Unicode))
             {

@@ -156,9 +156,23 @@ namespace MainDateBase
         }
 
 
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            Button_Open_Click(sender, e);
+        }
 
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Button_Save_Click(sender, e);
+        }
 
+        private void Author_Click(object sender, RoutedEventArgs e)
+        {
+            string Info = "Разработчик: Саранчин К.А., студент группы ВМК-21\n\n";
+            MessageBox.Show(Info, "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information);
 
+        }
+        
 
     }
 }
