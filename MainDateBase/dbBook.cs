@@ -11,8 +11,10 @@ using System.Windows.Controls;
 
 namespace MainDateBase
 {
+    /// Класс базы данных библиотеки
     public class DBBook
     {
+        /// Коллекция данных связанная с интерфейсом
         public ObservableCollection<Book> books;
        
         public DBBook()
@@ -71,6 +73,7 @@ namespace MainDateBase
             }
         }
 
+        /// Удаление всей бд
         public void DeleteDB()
         {
             books.Clear();

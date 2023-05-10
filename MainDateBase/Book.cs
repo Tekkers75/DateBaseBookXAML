@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MainDateBase
 {
+    /// Класс описание книг
     public class Book
     {
         string author;
