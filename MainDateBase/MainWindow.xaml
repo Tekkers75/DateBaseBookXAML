@@ -11,13 +11,13 @@
         <Grid.Background>
             <ImageBrush ImageSource="/1614630795_15-p-fon-knigi-dlya-fotoshopa-24 — копия.jpg"/>
         </Grid.Background>
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="10,94,10,32"/>
-        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="84" Click="Button_Save_Click" Background="#FFACCEF3"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=18}" Margin="10,65,10,10"/>
+        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="115,30,0,0" VerticalAlignment="Top" Width="84" Click="Button_Save_Click" Background="#FFACCEF3"/>
         <Button x:Name="Button_Open" Content="Открыть" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="84" Click="Button_Open_Click" Background="#FFACCEF3"/>
-        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="114,30,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click" Background="#FFACCEF3"/>
-        <Button x:Name="Button_Del" Content="Удалить строку" Margin="0,30,52,0" VerticalAlignment="Top" Click="Button_Del_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
-        <Button x:Name="Button_Del_All" Content="Удалить все" Margin="0,63,52,0" VerticalAlignment="Top" Click="Button_Del_All_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
-        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="114,63,0,0" VerticalAlignment="Top" Click="Button_Sort_Click" Width="84" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="221,30,0,0" VerticalAlignment="Top" Width="84" Click="Button_Add_Click" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Del" Content="Удалить строку" Margin="0,30,178,0" VerticalAlignment="Top" Click="Button_Del_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Del_All" Content="Удалить все" Margin="0,30,52,0" VerticalAlignment="Top" Click="Button_Del_All_Click" HorizontalAlignment="Right" Width="100" Background="#FFACCEF3"/>
+        <Button x:Name="Button_Sort" Content="Сортировка" HorizontalAlignment="Left" Margin="324,30,0,0" VerticalAlignment="Top" Click="Button_Sort_Click" Width="84" Background="#FFACCEF3"/>
         <TextBlock x:Name="Label_Save" Margin="563,4,2,0" TextWrapping="Wrap" Text="Автосохранение" VerticalAlignment="Top"/>
         <Menu Margin="0,0,157,0" Height="30" VerticalAlignment="Top">
             <Menu.Background>

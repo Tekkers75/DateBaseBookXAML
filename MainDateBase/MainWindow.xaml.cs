@@ -30,6 +30,8 @@ namespace MainDateBase
         public MainWindow()
         {
             InitializeComponent();
+            /// todo
+            /// как работает ItemSource
             datagrid.ItemsSource = Databook.books;
             //System.Windows.Threading.DispatcherTimer 
             Label_Save.Visibility = Visibility.Hidden;
