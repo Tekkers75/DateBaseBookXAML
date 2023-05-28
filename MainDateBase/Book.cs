@@ -17,6 +17,19 @@ namespace MainDateBase
         int count;
         int price;
 
+        public Book()
+        {
+            author = "";
+            title = "";
+            genre = "";
+            year = 0;
+            count = 0;
+            price = 0; 
+        }
+
+
+
+
         public Book(string author, string title, string genre, int year, int count, int price)
         {
             this.author = author;
