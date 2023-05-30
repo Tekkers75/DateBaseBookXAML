@@ -25,6 +25,17 @@ namespace MainDateBase.Tests
 
             book.Название = "Один на один";
             Assert.AreEqual("Один на один", book.Название);
+            try
+            {
+                book.Название = "";
+                Assert.Fail("Исключение");
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Название не может быть пустым", ex.Message);
+            }
+            
+
 
         }
 
@@ -40,7 +51,17 @@ namespace MainDateBase.Tests
 
             book.Автор = "Earo";
             Assert.AreEqual("Earo", book.Автор);
-            
+
+            try
+            {
+                book.Автор = "";
+                Assert.Fail("Исключение");
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Автор не может быть пустым", ex.Message);
+            }
+
 
         }
 
@@ -56,6 +77,16 @@ namespace MainDateBase.Tests
 
             book.Жанр = "Roman";
             Assert.AreEqual("Roman", book.Жанр);
+
+            try
+            {
+                book.Жанр = "";
+                Assert.Fail("Исключение");
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Жанр не может быть пустым", ex.Message);
+            }
 
 
         }
@@ -74,7 +105,16 @@ namespace MainDateBase.Tests
             book.Год = 2004;
             Assert.AreEqual(2004, book.Год);
 
-
+            try
+            {
+                book.Год = 0;
+                Assert.Fail("Исключение");
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Год не может быть меньше или равен нулю", ex.Message);
+            }
+           
         }
 
 

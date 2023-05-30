@@ -42,26 +42,54 @@ namespace MainDateBase
 
         public string Автор
         {
+            
             get { return author; }
-            set { author = value; }
+            set 
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Автор не может быть пустым");
+            }
+                    author = value; 
+            }
         }
 
         public string Название
         {
             get { return title; }
-            set { title = value; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Название не может быть пустым");
+                }
+                title = value; 
+            }
         }
 
         public string Жанр
         {
             get { return genre; }
-            set { genre = value; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Жанр не может быть пустым");
+                }
+                genre = value; 
+            }
         }
 
         public int Год
         {
             get { return year; }
-            set { year = value; }
+            set {
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Год не может быть меньше или равен нулю");
+                }
+                year = value; 
+            }
         }
 
         public int Количество
